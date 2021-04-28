@@ -1,10 +1,13 @@
 import {useState} from 'react';
 import {useParams} from 'react-router-dom';
+import './addForm.css';
 
-export function addForm(){
+const AddForm = ()=>{
+  console.log('text');
     return(
-       <div className="addForm">
-      <table>
+ <div className="add">
+   <form>
+   <table>
         <thead></thead>
         <tbody>
           <tr>
@@ -15,9 +18,11 @@ export function addForm(){
           <td>Add an event or memories :</td>
           <td><input type="text" name="event"></input></td>
           </tr>
+          <input type="submit" name ="submit" value="Add"></input>
         </tbody>
       </table>
-       </div> 
-    )
+   </form>
+ </div> 
+    );
 }
-export default addForm;
+export default AddForm;
